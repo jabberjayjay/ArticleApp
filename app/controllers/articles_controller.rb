@@ -36,6 +36,13 @@ class ArticlesController < ApplicationController
             render 'edit', status: :unprocessable_entity
         end
     end
+
+    def destroy
+        @article = Article.find(params[:id]) # find the article
+        @article.destroy                      # destroy the article
+        redirect_to articles_path    # redirect to the article list
+    end
+
     
 
 end
