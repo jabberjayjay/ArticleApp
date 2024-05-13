@@ -6,12 +6,12 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - master
       - deploy:
           filters:
             branches:
               only:
-                - main
+                - master
           requires:
             - build
 
